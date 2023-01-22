@@ -606,7 +606,7 @@ function win (winner) {
     }
 
     let victoryScreen = setInterval (function () {
-            incrementer += 2
+            incrementer += 1
             computing.style.height = `${incrementer}%`
             computing.style.top = `${50 -(incrementer/2)}%`
 
@@ -650,7 +650,7 @@ function win (winner) {
                 }, 250)
             }
         
-    }, 50)
+    }, 25)
 
 }
 
