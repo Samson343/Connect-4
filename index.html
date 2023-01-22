@@ -1,114 +1,128 @@
 <html>
-  <head>
-    <link rel = "stylesheet" href = "style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fasthand&family=Poppins:wght@300&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
-    <title>Connect-4 Sam Banister</title>
-  </head>
+<head>
+  <link rel="stylesheet" href="style.css">
 
-  <header id = "topBar">
-    <h1 id = "topHeading">Connect IV</h1>
-  </header>
-  
-  <body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fasthand&family=Poppins:wght@300&family=Roboto+Mono:wght@100&display=swap"
+    rel="stylesheet">
+  <title>Connect-4 Sam Banister</title>
+  <script src="https://kit.fontawesome.com/dcad18d1cb.js" crossorigin="anonymous"></script>
+</head>
 
-    
+<header id="topBar">
+  <h1 id="topHeading">Connect IV</h1>
+</header>
 
-    <main id = "app">
-      <div id = columnSelectorWrapper>
-        <table id = "columnSelector">
+<body>
+  <div id = "mainContent">
+  <ul id="side-menu">
+    <li>
+      <i class="fa-regular fa-circle-question"></i>
+    </li>
+    <li>
+      <div class="side-menu__label">Welcome! Click above the board to drop a token into any column. Show the
+        computer who's boss by getting 4 in a row - don't forget about diagonals!</div>
+    </li>
+  </ul>
+  <main id="app">
+
+      <div id=columnSelectorWrapper>
+        <table id="columnSelector">
           <tr>
-            <td id = "column1"></td>
-            <td id = "column2"></td>
-            <td id = "column3"></td>
-            <td id = "column4"></td>
-            <td id = "column5"></td>
-            <td id = "column6"></td>
-            <td id = "column7"></td>      
+            <td id="column1"></td>
+            <td id="column2"></td>
+            <td id="column3"></td>
+            <td id="column4"></td>
+            <td id="column5"></td>
+            <td id="column6"></td>
+            <td id="column7"></td>
           </tr>
         </table>
       </div>
 
-      <div id = "gameBoardWrapper">
-        <table id = "gameBoard">
-          <tr id = "row1">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>      
-          </tr>
-          <tr id = "row2">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>      
-          </tr>
-          <tr id = "row3">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>      
-          </tr>
-          <tr id = "row4">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>      
-          </tr>
-          <tr id = "row5">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>      
-          </tr>
-          <tr id = "row6">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>      
-          </tr>
-        </table>
-      </div>
+        <div id="gameBoardWrapper">
+          <table id="gameBoard">
+            <tr id="row1">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr id="row2">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr id="row3">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr id="row4">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr id="row5">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr id="row6">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
 
-      <div id = "turnWrapper">
-        <span id = "turn">turn</span>
-        <p id = "turnIndicator"></p>
-      </div>
-    </main>
+        <div id="turnWrapper">
+          <span id="turn">turn</span>
+          <p id="turnIndicator"></p>
+        </div>
+  </main>
+  </div>
 
-    <div id = "computing">
-      <h3 id = "computerMessage">Computer is Computing</h3>
-      <span class = "victoryMessage" id ="victory1">Would</span>
-      <span class = "victoryMessage" id ="victory2">you</span>
-      <span class = "victoryMessage" id ="victory3">like</span>
-      <span class = "victoryMessage" id ="victory4">to</span>
-      <span class = "victoryMessage" id ="victory5">play</span>
-      <span class = "victoryMessage" id ="victory6">again?</span>
-      <button id = "resetButton">Play Again?</button>
-    </div>
-    <footer>
+  <div id="computing">
+    <h3 id="computerMessage">Computer is Computing</h3>
+    <span class="victoryMessage" id="victory1">Would</span>
+    <span class="victoryMessage" id="victory2">you</span>
+    <span class="victoryMessage" id="victory3">like</span>
+    <span class="victoryMessage" id="victory4">to</span>
+    <span class="victoryMessage" id="victory5">play</span>
+    <span class="victoryMessage" id="victory6">again?</span>
+    <button id="resetButton">Play Again?</button>
+  </div>
+  <footer>
 
-    </footer>
-  </body>
-  <script type="text/javascript" src="app.js"></script>
+  </footer>
+</body>
+<script type="text/javascript" src="app.js"></script>
+
 </html>

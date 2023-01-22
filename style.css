@@ -1,4 +1,48 @@
 
+#mainContent {
+    display: flex;
+
+}
+
+#side-menu {
+    width: 15px;
+    padding: 0px;
+    padding-left: 20px;
+    list-style: none;
+    transition: ease-in-out all .4s;
+    display: table;
+    position: absolute;
+    align-self: flex-start;
+    margin-left: 53%;
+    margin-top: 5vh;
+  }
+  
+  li {
+    width: 10%;
+    height: 10%;
+    display: table-cell;
+  }
+  
+  .side-menu__label {
+    float: left;
+    width: 230px;
+    height: 50px;
+    opacity: 0;
+    text-align:left;
+    margin-bottom: 50px;
+    position: absolute;
+    transition: ease-in-out all .4s;
+  }
+  
+  #side-menu:hover {
+    width: 100px;
+  }
+  
+  #side-menu:hover .side-menu__label {
+    opacity: 1;
+  }
+
+
 #topBar {
     display: flex;
     justify-content: center;
