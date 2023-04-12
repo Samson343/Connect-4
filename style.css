@@ -70,6 +70,7 @@ body {
     background-image: "none";
     min-height: 100vh;
     overflow-y: hidden;
+    padding-bottom: 10vh;
 }
 td {
     border-radius: 10%;
@@ -130,6 +131,8 @@ footer {
     color: azure;
     width: 100%;
     height: 8%;
+    bottom: 0;
+    position: absolute;
 }
 #turnIndicator {
     display: inline-block;
